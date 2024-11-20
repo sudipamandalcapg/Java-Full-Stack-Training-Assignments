@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>File Management System</h1>
+
+        <!-- File Creation -->
+        <div class="input-group">
+            <input type="text" id="fileName" placeholder="Enter file name" />
+            <textarea id="fileContent" placeholder="Enter file content"></textarea>
+            <button onclick="createFile()">Create File</button>
+        </div>
+
+        <!-- File Upload -->
+        <div class="input-group">
+            <input type="file" id="fileUpload" />
+            <button onclick="uploadFile()">Upload File</button>
+        </div>
+
+        <!-- File Operations -->
+        <div class="button-group">
+            <button onclick="downloadFile()">Download File</button>
+            <button onclick="deleteFile()">Delete File</button>
+            <button onclick="showFileNames()">Show Files</button>
+        </div>
+
+        <!-- Output -->
+        <div id="output"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
