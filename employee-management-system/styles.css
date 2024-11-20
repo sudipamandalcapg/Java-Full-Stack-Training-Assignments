@@ -1,0 +1,62 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f9;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+div {
+    margin-bottom: 20px;
+}
+
+input {
+    margin: 5px;
+    padding: 8px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: 2px solid #007BFF;
+    border-radius: 3px;
+    margin: 20px 0px;
+    cursor: pointer;
+}
+
+hr {
+    margin: 40px 0px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#employee-list {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#employee-list th,
+#employee-list td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+#employee-list th {
+    background-color: #007BFF;
+    color: white;
+}
+
+#employee-details {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #e9ecef;
+}
