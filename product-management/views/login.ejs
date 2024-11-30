@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        <%= role.charAt(0).toUpperCase() + role.slice(1) %> Login
+    </title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+    <form action="/auth" method="POST">
+        <h2>
+            <%= role.charAt(0).toUpperCase() + role.slice(1) %> Login
+        </h2>
+        <input type="text" name="username" placeholder="Enter Username" required>
+        <input type="password" name="password" placeholder="Enter Password" required>
+        <button type="submit">Login</button>
+    </form>
+
+    <% if (errorMessage) { %>
+        <p style="color:red;">
+            <%= errorMessage %>
+        </p>
+        <% } %>
+</body>
+
+</html>
