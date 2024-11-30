@@ -1,0 +1,97 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background: linear-gradient(to right, #8e44ad, #9b59b6); /* Gradient purple */
+  color: #fff; /* White text for general readability */
+}
+
+/* Header and Buttons */
+h2,
+h3 {
+  color: #ffc300; /* Golden yellow for contrast on both dark and light backgrounds */
+  margin-bottom: 10px;
+}
+
+button,
+a {
+  display: inline-block;
+  background-color: #6c3483; /* Dark purple */
+  color: white;
+  padding: 8px 12px;
+  margin: 5px 0;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover,
+a:hover {
+  background-color: #5b2c6f; /* Slightly darker purple for hover effect */
+}
+
+/* Forms */
+form {
+  margin: 20px 0;
+  padding: 15px;
+  background-color: #fff; /* White background for contrast */
+  color: #333; /* Dark text for readability inside form */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+form input,
+form select,
+form button {
+  margin: 10px 0;
+  padding: 8px;
+  width: calc(100% - 16px); /* Ensure inputs fit within the form */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #fff; /* White table background */
+  border: 1px solid #ddd;
+  color: #333; /* Dark text inside tables */
+}
+
+th,
+td {
+  text-align: left;
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #d7bde2; /* Light purple for table headers */
+  color: #6c3483;
+}
+
+tr:hover {
+  background-color: #f4ecf7; /* Light lavender for row hover */
+}
+
+/* No Results Message */
+p {
+  color: #fad7a0; /* Light yellow for no results text */
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Links */
+a.logout {
+  float: right;
+  background-color: #922b21; /* Red for logout button */
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+a.logout:hover {
+  background-color: #641e16; /* Darker red for hover effect */
+}
