@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Admin Panel</title>
+
+    <head>
+        <title>Page Title</title>
+        <link rel="stylesheet" href="/styles.css">
+    </head>
+
+</head>
+
+<body>
+    <h2>Welcome, <%= user.username %>!</h2>
+    <a href="/logout">Logout</a>
+    <form action="/add-product" method="POST">
+        <h3>Add a Product</h3>
+        <input type="text" name="productName" placeholder="Product Name" required>
+        <input type="text" name="productId" placeholder="Product ID" required>
+        <input type="number" name="productPrice" placeholder="Price" required>
+        <input type="text" name="category" placeholder="Category" required>
+        <input type="date" name="mfgDate" placeholder="Manufacturing Date" required>
+        <input type="date" name="expDate" placeholder="Expiration Date" required>
+        <button type="submit">Add Product</button>
+    </form>
+
+    <h3>Product List</h3>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Product ID</th>
+                <th>Price</th>
+                <th>Category</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% productDatabase.forEach(product=> { %>
+                <tr>
+                    <td>
+                        <%= product.productName %>
+                    </td>
+                    <td>
+                        <%= product.productId %>
+                    </td>
+                    <td>$<%= product.productPrice %>
+                    </td>
+                    <td>
+                        <%= product.category %>
+                    </td>
+                </tr>
+                <% }) %>
+        </tbody>
+    </table>
+
+</body>
+
+</html>

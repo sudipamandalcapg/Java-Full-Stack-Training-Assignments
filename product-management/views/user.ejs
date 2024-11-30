@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>User Panel</title>
+
+    <head>
+        <title>Page Title</title>
+        <link rel="stylesheet" href="/styles.css">
+    </head>
+
+</head>
+
+<body>
+    <h2>Welcome, <%= user.username %>!</h2>
+    <a href="/logout">Logout</a>
+    <form action="/search-product" method="POST">
+        <h3>Search Products</h3>
+        <input type="text" name="searchKey" placeholder="Enter search term" required>
+        <label for="searchBy">Search By:</label>
+        <select name="searchBy" id="searchBy">
+            <option value="name">Name</option>
+            <option value="category">Category</option>
+        </select>
+        <button type="submit">Search</button>
+    </form>
+
+    <h3>Search Results</h3>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Product ID</th>
+                <th>Price</th>
+                <th>Category</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% if (searchResults.length===0) { %>
+                <tr>
+                    <td colspan="4">No products found for your search.</td>
+                </tr>
+                <% } else { %>
+                    <% searchResults.forEach(product=> { %>
+                        <tr>
+                            <td>
+                                <%= product.productName %>
+                            </td>
+                            <td>
+                                <%= product.productId %>
+                            </td>
+                            <td>$<%= product.productPrice %>
+                            </td>
+                            <td>
+                                <%= product.category %>
+                            </td>
+                        </tr>
+                        <% }) %>
+                            <% } %>
+        </tbody>
+    </table>
+
+</body>
+
+</html>
