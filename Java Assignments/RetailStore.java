@@ -30,8 +30,8 @@ public class RetailStore {
 
 		// Variables for handling prices and totals
 		double totalPrice = 0.0;
-		double salesTaxRate = 0.1; // Example: 10% sales tax
-		double discountRate = 0.05; // Example: 5% discount
+		double salesTaxRate = 0.1; 
+		double discountRate = 0.05; 
 
 		// Menu options
 		System.out.println("Retail Store System");
